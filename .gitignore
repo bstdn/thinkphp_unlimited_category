@@ -1,2 +1,11 @@
 .DS_Store
 .idea
+
+Application/Runtime/Cache/*
+#!Application/Runtime/Cache/index.html
+Application/Runtime/Data/*
+#!Application/Runtime/Data/index.html
+Application/Runtime/Logs/*
+#!Application/Runtime/Logs/index.html
+Application/Runtime/Temp/*
+#!Application/Runtime/Temp/index.html
