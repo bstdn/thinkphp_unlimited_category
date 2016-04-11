@@ -9,4 +9,8 @@ return array(
     'DB_PWD'                =>  '',          // 密码
     'DB_PORT'               =>  '3306',        // 端口
     'DB_PREFIX'             =>  'tp_',    // 数据库表前缀
+
+    // 布局设置
+    'LAYOUT_ON'             =>  true, // 是否启用布局
+    'LAYOUT_NAME'           =>  'layout', // 当前布局名称 默认为layout
 );
