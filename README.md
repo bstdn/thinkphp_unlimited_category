@@ -1,4 +1,18 @@
-﻿## 简介
+﻿# 这是一个基于 ThinkPHP3.2.3 实现的无限分类功能
+
+```sql
+DROP TABLE IF EXISTS `tp_cate`;
+CREATE TABLE IF NOT EXISTS `tp_cate` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类id',
+  `name` varchar(15) NOT NULL DEFAULT '' COMMENT '分类名称',
+  `pid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '父级分类id',
+  `sort` smallint(6) NOT NULL DEFAULT '0' COMMENT '排序',
+  PRIMARY KEY (`id`),
+  KEY `pid` (`pid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='分类表';
+```
+
+## 简介
 
 ThinkPHP 是一个免费开源的，快速、简单的面向对象的 轻量级PHP开发框架 ，创立于2006年初，遵循Apache2开源协议发布，是为了敏捷WEB应用开发和简化企业应用开发而诞生的。ThinkPHP从诞生以来一直秉承简洁实用的设计原则，在保持出色的性能和至简的代码的同时，也注重易用性。并且拥有众多的原创功能和特性，在社区团队的积极参与下，在易用性、扩展性和性能方面不断优化和改进，已经成长为国内最领先和最具影响力的WEB应用开发框架，众多的典型案例确保可以稳定用于商业以及门户级的开发。
 
