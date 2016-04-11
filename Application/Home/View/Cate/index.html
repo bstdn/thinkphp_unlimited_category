@@ -64,17 +64,19 @@
         <th>操作</th>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>分类名称</td>
-          <td>0</td>
-          <td class="col-xs-2"><input type="text" class="form-control input-sm" id="sort" name="sort" value="100" placeholder="Sort"></td>
+        <volist name="list" id="v">
+          <tr>
+          <td>{$v.id}</td>
+          <td>{$v.html}{$v.name}</td>
+          <td>{$v.level}</td>
+          <td class="col-xs-2"><input type="text" class="form-control input-sm" id="sort" name="{$v.id}" value="{$v.sort}" placeholder="Sort"></td>
           <td>
-            <a href="{:U('Cate/add', array('id' => 1))}" class="btn btn-sm btn-primary">添加子分类</a>
-            <a href="{:U('Cate/edit', array('id' => 1))}" class="btn btn-sm btn-warning">修改</a>
-            <a href="{:U('Cate/del', array('id' => 1))}" class="btn btn-sm btn-danger">删除</a>
+            <a href="{:U('Cate/add', array('id' => $v['id']))}" class="btn btn-sm btn-primary">添加子分类</a>
+            <a href="{:U('Cate/edit', array('id' => $v['id']))}" class="btn btn-sm btn-warning">修改</a>
+            <a href="{:U('Cate/del', array('id' => $v['id']))}" class="btn btn-sm btn-danger">删除</a>
           </td>
         </tr>
+        </volist>
         <tr>
           <td colspan="5" align="center">
             <button type="submit" class="btn btn-lg btn-primary">保存</button>

@@ -66,6 +66,10 @@
       <div class="col-sm-10">
         <select class="form-control" id="inputPid" name="pid">
           <option value="0">作为顶级</option>
+          <volist name="list" id="v">
+            <php>$selected = $v['id'] == $id ? ' selected' : '';</php>
+            <option value="{$v.id}"{$selected}>{$v.html}{$v.name}</option>
+          </volist>
         </select>
       </div>
     </div>
