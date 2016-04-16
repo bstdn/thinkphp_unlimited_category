@@ -54,7 +54,7 @@ class CateController extends Controller {
     protected function _add_post() {
         $result = M('Cate')->add(I('post.'));
         if($result) {
-            $this->success('保存成功', __CONTROLLER__ . '/index');
+            $this->success('保存成功', U('Cate/index'));
         } else {
             $this->error('保存失败');
         }
@@ -90,7 +90,7 @@ class CateController extends Controller {
         $CateModel = M('Cate');
         $result = $CateModel->save($data);
         if($result) {
-            $this->success('保存成功', __CONTROLLER__ . '/index');
+            $this->success('保存成功', U('Cate/index'));
         } else {
             $this->error('保存失败');
         }
@@ -128,7 +128,7 @@ class CateController extends Controller {
 
         $result = $CateModel->delete($id);
         if($result) {
-            $this->success('保存成功', __CONTROLLER__ . '/index');
+            $this->success('保存成功', U('Cate/index'));
         } else {
             $this->error('保存失败');
         }
